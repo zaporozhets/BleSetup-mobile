@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		768381DE1EDC923100C8BEAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768381DD1EDC923100C8BEAB /* AppDelegate.swift */; };
-		768381E01EDC923100C8BEAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768381DF1EDC923100C8BEAB /* ViewController.swift */; };
+		768381E01EDC923100C8BEAB /* BleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768381DF1EDC923100C8BEAB /* BleSetup.swift */; };
 		768381E31EDC923100C8BEAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768381E11EDC923100C8BEAB /* Main.storyboard */; };
 		768381E51EDC923100C8BEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768381E41EDC923100C8BEAB /* Assets.xcassets */; };
 		768381E81EDC923100C8BEAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768381E61EDC923100C8BEAB /* LaunchScreen.storyboard */; };
 		768381F31EDC923100C8BEAB /* BleSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768381F21EDC923100C8BEAB /* BleSetupTests.swift */; };
 		768381FE1EDC923100C8BEAB /* BleSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768381FD1EDC923100C8BEAB /* BleSetupUITests.swift */; };
+		7683820C1EDDC57E00C8BEAB /* GattController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683820B1EDDC57E00C8BEAB /* GattController.swift */; };
+		7683820F1EDDC7A900C8BEAB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7683820E1EDDC7A900C8BEAB /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		768381DA1EDC923100C8BEAB /* BleSetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleSetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768381DD1EDC923100C8BEAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		768381DF1EDC923100C8BEAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		768381DF1EDC923100C8BEAB /* BleSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSetup.swift; sourceTree = "<group>"; };
 		768381E21EDC923100C8BEAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		768381E41EDC923100C8BEAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		768381E71EDC923100C8BEAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		768381F91EDC923100C8BEAB /* BleSetupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleSetupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		768381FD1EDC923100C8BEAB /* BleSetupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSetupUITests.swift; sourceTree = "<group>"; };
 		768381FF1EDC923100C8BEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7683820B1EDDC57E00C8BEAB /* GattController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GattController.swift; sourceTree = "<group>"; };
+		7683820E1EDDC7A900C8BEAB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7683820F1EDDC7A900C8BEAB /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				768381F11EDC923100C8BEAB /* BleSetupTests */,
 				768381FC1EDC923100C8BEAB /* BleSetupUITests */,
 				768381DB1EDC923100C8BEAB /* Products */,
+				7683820D1EDDC7A900C8BEAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				768381DD1EDC923100C8BEAB /* AppDelegate.swift */,
-				768381DF1EDC923100C8BEAB /* ViewController.swift */,
+				768381DF1EDC923100C8BEAB /* BleSetup.swift */,
+				7683820B1EDDC57E00C8BEAB /* GattController.swift */,
 				768381E11EDC923100C8BEAB /* Main.storyboard */,
 				768381E41EDC923100C8BEAB /* Assets.xcassets */,
 				768381E61EDC923100C8BEAB /* LaunchScreen.storyboard */,
@@ -123,6 +130,14 @@
 				768381FF1EDC923100C8BEAB /* Info.plist */,
 			);
 			path = BleSetupUITests;
+			sourceTree = "<group>";
+		};
+		7683820D1EDDC7A900C8BEAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7683820E1EDDC7A900C8BEAB /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +208,13 @@
 				TargetAttributes = {
 					768381D91EDC923100C8BEAB = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 47A3JWG369;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					768381ED1EDC923100C8BEAB = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -259,7 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768381E01EDC923100C8BEAB /* ViewController.swift in Sources */,
+				768381E01EDC923100C8BEAB /* BleSetup.swift in Sources */,
+				7683820C1EDDC57E00C8BEAB /* GattController.swift in Sources */,
 				768381DE1EDC923100C8BEAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47A3JWG369;
 				INFOPLIST_FILE = BleSetup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dx.BleSetup;
@@ -426,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47A3JWG369;
 				INFOPLIST_FILE = BleSetup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dx.BleSetup;
@@ -507,6 +531,7 @@
 				768382041EDC923100C8BEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		768382051EDC923100C8BEAB /* Build configuration list for PBXNativeTarget "BleSetupTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +540,7 @@
 				768382071EDC923100C8BEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		768382081EDC923100C8BEAB /* Build configuration list for PBXNativeTarget "BleSetupUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +549,7 @@
 				7683820A1EDC923100C8BEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
